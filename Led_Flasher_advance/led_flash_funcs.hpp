@@ -50,8 +50,8 @@ class Led{
   private:
   static const int V_VAL_MAX = 515; //可変抵抗によるインプット電圧の最大値
   static const int V_VAL_MIN = 0;   //可変抵抗によるインプット電圧の最小値
-  static const double MAGNIFICATION_MAX = 2.0;  //可変抵抗によって設定される点灯時間倍率の最大値
-  static const double MAGNIFICATION_MIN = 0.5;  //可変抵抗によって設定される点灯時間倍率の最小値
+  static constexpr double MAGNIFICATION_MAX = 2.0;  //可変抵抗によって設定される点灯時間倍率の最大値
+  static constexpr double MAGNIFICATION_MIN = 0.5;  //可変抵抗によって設定される点灯時間倍率の最小値
   const double A = (MAGNIFICATION_MAX - MAGNIFICATION_MIN) / (V_VAL_MAX - V_VAL_MIN); //係数
   const double B = MAGNIFICATION_MAX - A * V_VAL_MAX; //定数項
 
